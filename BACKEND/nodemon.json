@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USER": "VishalKumar09",
+    "DB_PASSWORD": "VISHU",
+    "DB_NAME": "Storage",
+    "JWT_KEY": "somthing_private_which_i_dont_tell_to_anyone"
+  }
+}
