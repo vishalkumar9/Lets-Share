@@ -20,18 +20,20 @@ In this Project I have used Reactjs,HTML,CSS,JavaScript,Expressjs,Nodejs and Mon
 ---
 
 - install packages required.
-  > cd frontend
-  > npm install
-  > npm start
+  >
+  - cd frontend
+  - npm install
+  - npm start
 
 ### Frontend
 
 ---
 
 - install packages required.
-  > cd backend
-  > npm install
-  > npm start
+  >
+  - cd backend
+  - npm install
+  - npm start
 
 ### MongoDB setup
 
