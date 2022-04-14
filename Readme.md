@@ -46,3 +46,11 @@ create a cluster on MongoDB and copy your connection string and paste into the a
 ---
 
 make sure to add API key in location.js in backend file to convert geological address to lng, lat.
+
+### What I Have Learn
+
+---
+
+- Skills I gain in this project is Expressjs, Nodejs and MongoDB.
+- How Frontend and Backend communicate with each other.
+- How Backend communicate with MonogoDB.
