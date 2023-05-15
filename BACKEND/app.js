@@ -52,11 +52,12 @@ console.log(process.env.DB_USER,process.env.DB_NAME,process.env.DB_PASSWORD);
 
 mongoose
   .connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@storage.p18vofd.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, // enter mongodb connection string
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@storage.p18vofd.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, // enter mongodb connection string
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
 
   .then(() => {
+
     app.listen(process.env.PORT || 5000);   // process.env.PORT || 5000
     console.log("connect");
   })
