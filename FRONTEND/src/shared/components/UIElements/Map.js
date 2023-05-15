@@ -8,7 +8,7 @@ const Map = (props) => {
   const { center, zoom } = props;
 
   useEffect(() => {
-    new window.ol.Map({
+    new window.ol.map({
       target: mapRef.current.id,
       layers: [
         new window.ol.layer.Tile({

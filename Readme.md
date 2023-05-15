@@ -21,7 +21,7 @@ In this Project I have used Reactjs,HTML,CSS,JavaScript,Expressjs,Nodejs and Mon
 
 - install packages required.
   >
-  - cd frontend
+  - cd backend
   - npm install
   - npm start
 
@@ -31,7 +31,7 @@ In this Project I have used Reactjs,HTML,CSS,JavaScript,Expressjs,Nodejs and Mon
 
 - install packages required.
   >
-  - cd backend
+  - cd frontend
   - npm install
   - npm start
 

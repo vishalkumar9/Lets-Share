@@ -54,7 +54,7 @@ const NewPlace = () => {
       formData.append("image", formState.inputs.image.value);
       formData.append("creator", auth.userId);
 
-      const reponse = await fetch("http://localhost:5000/api/places", {
+      const reponse = await fetch(process.env.REACT_APP_BACKEND_URL + "/places", {
         method: "POST",
         body: formData,
         headers: {

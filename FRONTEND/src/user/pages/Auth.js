@@ -68,10 +68,11 @@ const Auth = () => {
   const authSubmitHandler = async (event) => {
     event.preventDefault();
     console.log(formState.inputs);
+    console.log(process.env.REACT_APP_BACKEND_URL);
     setIsLoading(true);
     if (isLoginMode) {
       try {
-        const response = await fetch("http://localhost:5000/api/users/login", {
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/users/login", {
           method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -100,7 +101,7 @@ const Auth = () => {
         formData.append("password", formState.inputs.password.value);
         formData.append("image", formState.inputs.image.value);
 
-        const response = await fetch("http://localhost:5000/api/users/signup", {
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/users/signup", {
           method: "POST",
           body: formData,
         });

@@ -36,7 +36,7 @@ const PlaceItem = (props) => {
     setIsLoading(true);
     try {
       const reponse = await fetch(
-        `http://localhost:5000/api/places/${props.id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/places/${props.id}`,
         {
           method: "DELETE",
           headers: {
@@ -73,7 +73,8 @@ const PlaceItem = (props) => {
         footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
       >
         <div className="map-container">
-          <Map center={props.coordinates} zoom={16} />
+          <iframe title="map" width="100%" height="100%" src={'https://maps.google.com/maps?q=' + props.coordinates.lat.toString() + ',' + props.coordinates.lng.toString() + '&t=&z=15&ie=UTF8&iwloc=&output=embed'}></iframe><script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=5a33be79e53caf0a07dfec499abf84b7b481f165'></script>
+          {/*<Map center={props.coordinates} zoom={16} />*/}
         </div>
       </Modal>
       <Modal
@@ -102,7 +103,7 @@ const PlaceItem = (props) => {
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
             <img
-              src={`http://localhost:5000/${props.image}`}
+              src={`${process.env.REACT_APP_ASSET_URL}/${props.image}`}
               alt={props.title}
             />
           </div>
