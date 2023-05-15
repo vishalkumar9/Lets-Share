@@ -12,8 +12,7 @@ module.exports = (req, res, next) => {
     }
 
     const decodedToken = jwt.verify(
-      token,
-      "somthing_private_which_i_dont_tell_to_anyone"
+      token,process.env.JWT_KEY
     );
     req.userData = { userId: decodedToken.userId };
     next();

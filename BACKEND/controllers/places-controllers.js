@@ -71,6 +71,7 @@ const createPlace = async (req, res, next) => {
 
   const { title, description, address } = req.body;
 
+  console.log(address);
   let coordinates;
   try {
     coordinates = await location(address);
@@ -94,11 +95,13 @@ const createPlace = async (req, res, next) => {
     creator: req.userData.userId,
   });
 
+
   let user;
   try {
     user = await User.findById(req.userData.userId);
+    console.log(user);
   } catch (err) {
-    const error = new HttpError("Creating place failed, please try again", 500);
+    const error = new HttpError("Creating place failed, please try again1", 500);
     return next(error);
   }
 
@@ -115,8 +118,9 @@ const createPlace = async (req, res, next) => {
     await user.save({ session: sess });
     await sess.commitTransaction();
   } catch (err) {
+    console.log(err);
     const error = new HttpError(
-      "Creating place failed, please try again.",
+      "Creating place failed, please try again2.",
       500
     );
     return next(error);
